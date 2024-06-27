@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>PLANT DISEASE PREDICTION</title>
+</head>
+<body>
+  <div class="container">
+    <div class="col-lg-12">
+      <center><h1 style="padding:30px;font-weight: 600 !important;font-size: 3.2em">PLANT DISEASE PREDICTION</h1></center>
+    </div>
+   <div class="col-lg-12">
+      <center><form  class="form-inline" action = "/predict" method = "post" enctype="multipart/form-data">
+          <input type="file" name="file"/><br>
+          <input type = "submit" class="btn btn-success" value="Predict">
+      </form></center>
+    </div>
+    <div class="col-lg-5" style="padding-top:30px">
+      <span class="border border-primary">
+        <img src="{{ user_image }}" alt="User Image" class="img-thumbnail" style="width:250px;height:250px;float:right">
+      </span>
+    </div>
+    <div class="col-lg-5" style="padding-top:30px">
+      <h4>Class name is <mark style="background-color:#04aa6d;color:white;border-radius:5px">{{plant}}</mark></h4>
+    </div>
+
+
+
+
+      <!-- Display model summary -->
+    <div class="col-lg-12" style="padding-top: 30px;">
+        <h3>Model Summary:</h3>
+        <pre>{{ model_summary }}</pre>
+    </div>
+    <!-- Display saved images -->
+    <div class="col-lg-12" style="padding-top: 30px;">
+        <h3>Activation Visualizations:</h3>
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>First Layer Activation - Channel 1:</h4>
+                <img src="{{ url_for('static', filename='images/first_layer_activation_1.png') }}" class="img-thumbnail" style="width: 300px;">
+            </div>
+            <div class="col-lg-6">
+                <h4>First Layer Activation - Channel 4:</h4>
+                <img src="{{ url_for('static', filename='images/first_layer_activation_4.png') }}" class="img-thumbnail" style="width: 300px;">
+            </div>
+            <div class="col-lg-6">
+                <h4>First Layer Activation - Channel 8:</h4>
+                <img src="{{ url_for('static', filename='images/first_layer_activation_8.png') }}" class="img-thumbnail" style="width: 300px;">
+            </div>
+            <div class="col-lg-6">
+                <h4>First Layer Activation - Channel 15:</h4>
+                <img src="{{ url_for('static', filename='images/first_layer_activation_15.png') }}" class="img-thumbnail" style="width: 300px;">
+            </div>
+            <div class="col-lg-6">
+                <h4>First Layer Activation - Channel 21:</h4>
+                <img src="{{ url_for('static', filename='images/first_layer_activation_21.png') }}" class="img-thumbnail" style="width: 300px;">
+            </div>
+            <div class="col-lg-6">
+                <h4>First Layer Activation - Channel 31:</h4>
+                <img src="{{ url_for('static', filename='images/first_layer_activation_31.png') }}" class="img-thumbnail" style="width: 300px;">
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+  </div>
+</body>
+</html>
+
+
