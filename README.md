@@ -24,7 +24,7 @@ The model structure and some extracted features are also displayed for deeper in
 
 🛠️ How to Run the Project  
 1.Clone the Repository 📥  
-git clone https://github.com/yourusername/leaf-health-detection.git  
+git clone https://github.com/venkateshjonna/Plant_Disease_Classification.git  
 cd leaf-health-detection  
 2.Install Dependencies 🛠️  
 pip install -r requirements.txt  
